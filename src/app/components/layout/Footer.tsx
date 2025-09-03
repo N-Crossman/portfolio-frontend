@@ -1,4 +1,4 @@
-import SocialMediaIcons from "./SocialMediaIcons"
+import SocialMediaIcons from "../common/SocialMediaIcons"
 
 export default function Footer() {
     return (
