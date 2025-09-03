@@ -15,7 +15,7 @@ export default function SocialIcons() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={label}
-          className="text-white hover:text-white transition-colors duration-300 text-2xl"
+          className="text-white hover:text-green-400 hover:scale-120 transform transition-all duration-300 text-2xl"
         >
           {icon}
         </a>
