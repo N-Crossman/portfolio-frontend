@@ -1,8 +1,12 @@
 import Image from "next/image"
+import ThemeToggle from "../common/ThemeToggle";
 
 export default function Hero() {
     return (
-      <section className="flex flex-col items-center justify-center text-center py-16 px-6">
+      <section className="relative flex flex-col items-center justify-center text-center py-16 px-6">
+      <div className="absolute top-4 right-6">
+        <ThemeToggle />
+      </div>
       <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-blue-400 shadow-lg">
         <Image
           src="/images/ProfilePic.jpg"
