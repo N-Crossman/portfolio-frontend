@@ -7,7 +7,7 @@ interface StarBackgroundProps {
 }
 
 const StarBackground: React.FC<StarBackgroundProps> = ({ children }) => {
-    const stars = useMemo(() => Array.from({ length: 300 }, (_, i) => ({
+    const stars = useMemo(() => Array.from({ length: 75 }, (_, i) => ({
         id: i,
         x: Math.random() * 100,
         y: Math.random() * 100,
