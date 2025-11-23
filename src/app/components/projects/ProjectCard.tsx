@@ -46,8 +46,26 @@ export default function ProjectCard({ project, index}: ProjectCardProps){
           </div>
         )}
 
-        <div className="flex gap-4 mt-4">
-          {project.repo && (
+        <div className="flex gap-4 mt-4 items-center">
+          {project.repos && project.repos.length > 0 ? (
+            <div className="flex gap-4">
+              {project.repos.map((repoUrl: string, idx: number) => (
+                <a
+                  key={idx}
+                  href={repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-green-400 dark:hover-text-green-400 transition-colors duration-300 text-lg flex items-center gap-1"
+                  title={repoUrl.includes('Client') ? 'Client Repo' : 'Server Repo'}
+                >
+                  <FaGithub />
+                  <span className="text-xs text-gray-500">
+                    {repoUrl.includes('Client') ? 'Client' : 'Server'}
+                  </span>
+                </a>
+              ))}
+            </div>
+          ) : project.repo ? (
             <a
               href={project.repo}
               target="_blank"
@@ -56,7 +74,8 @@ export default function ProjectCard({ project, index}: ProjectCardProps){
             >
               <FaGithub />
             </a>
-          )}
+          ) : null}
+
           {project.demo && (
             <a
               href={project.demo}

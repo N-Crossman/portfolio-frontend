@@ -5,14 +5,21 @@ export interface Project {
     tech: string[];
     demo?: string;
     repo?: string;
+    repos?: string[];
+    type?: string;
 }
 
 export const projects: Project[] = [
     {
-    title: "Coming Soon",
-    description: "This project is under construction. Stay tuned!",
+    title: "AGInfrastructure",
+    description: "Active contributor driving quality improvements across AGI-X framework. Shipped frontend features for timezone and user management, implemented comprehensive test suites, and resolved blocking issues affecting developer experience.",
     image: "/images/projects/placeholder.png",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
+    tech: ["Next.js", "React", "TypeScript", "Python", "Tailwind", "FastAPI"],
+    repos: [
+        "https://github.com/JamesonRGrieve/ClientFramework",
+        "https://github.com/JamesonRGrieve/ServerFramework"
+    ],
+    type: "opensource",
   },
   {
     title: "Coming Soon",
