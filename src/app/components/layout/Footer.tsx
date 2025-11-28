@@ -1,4 +1,4 @@
-import SocialIcons from "../common/SocialMediaIcons";
+import QuickLinks from "../common/QuickLinks";
 import WeatherFooter from "../common/Weather";
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
               apiKey={process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY || ""}
               unit="metric"
             />
-            <SocialIcons />
+            <QuickLinks />
             <p className="text-sm text-black dark:text-white">dev.noah@gmail.com</p>
             <p className="text-sm text-black dark:text-white">&copy; {new Date().getFullYear()}. All rights reserved.</p>
           </div>
@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
 
             <div className="justify-self-center">
-              <SocialIcons />
+              <QuickLinks />
             </div>
 
             <div className="justify-self-end flex flex-col gap-2">

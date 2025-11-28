@@ -3,7 +3,7 @@ import ThemeToggle from "../common/ThemeToggle";
 
 export default function Hero() {
     return (
-      <section className="relative flex flex-col lg:flex-row items-start justify-between text-left py-16 px-6 max-w-7xl mx-auto lg:mr-auto lg:ml-64 gap-8 lg:gap-16">
+      <section id="about" className="relative flex flex-col lg:flex-row items-start justify-between text-left py-16 px-6 max-w-7xl mx-auto lg:mr-auto lg:ml-64 gap-8 lg:gap-16">
       <div className="fixed top-4 right-6 z-[99999] scale-110 sm:scale-100">
         <ThemeToggle />
       </div>
