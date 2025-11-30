@@ -3,25 +3,27 @@ import { VscAccount } from "react-icons/vsc";
 import { FaRegFolder } from "react-icons/fa";
 import { IoHomeOutline } from "react-icons/io5";
 import { GrContact } from "react-icons/gr";
+import { LuBrain } from "react-icons/lu";
 
 const socialLinks = [
-    { href: "/", icon: <IoHomeOutline />, label: "Home" },
-    { href: "UPDATE: About me section", icon: <VscAccount />, label: "About" },
-    { href: "UPDATE: Projects section", icon: <FaRegFolder />, label: "Projects" },
-    { href: "UPDATE: Contact section", icon: <GrContact />, label: "Contact" },
-    { href: "https://github.com/N-Crossman", icon: <FaGithub />, label: "GitHub" },
-    { href: "https://linkedin.com/in/noah-crossman", icon: <FaLinkedin />, label: "LinkedIn" },
+    { href: "#", icon: <IoHomeOutline />, label: "Home", external: false },
+    { href: "#about", icon: <VscAccount />, label: "About", external: false },
+    { href: "#projects", icon: <FaRegFolder />, label: "Projects", external: false },
+    { href: "#skills", icon: <LuBrain />, label: "Skills", external: false },
+    { href: "UPDATE: Contact section", icon: <GrContact />, label: "Contact", external: false },
+    { href: "https://github.com/N-Crossman", icon: <FaGithub />, label: "GitHub", external: true },
+    { href: "https://linkedin.com/in/noah-crossman", icon: <FaLinkedin />, label: "LinkedIn", external: true },
 ];
 
 export default function SocialIcons() {
     return (
      <div className="flex items-center gap-6">
-      {socialLinks.map(({ href, icon, label }) => (
+      {socialLinks.map(({ href, icon, label, external }) => (
         <a
           key={label}
           href={href}
-          target="_blank"
-          rel="noopener noreferrer"
+          { ...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          
           aria-label={label}
           className="text-black hover:text-green-400 hover:scale-110 transform transition-all duration-300 text-2xl dark:text-white dark:hover:text-green-400"
         >

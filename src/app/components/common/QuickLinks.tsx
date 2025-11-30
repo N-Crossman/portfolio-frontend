@@ -1,10 +1,10 @@
 
 export default function QuickLinks() {
     const links = [
-        { name: "Home", url: "#" },
-        { name: "About Me", url: "#about" },
+        { name: "About", url: "#about" },
         { name: "Projects", url: "#projects" },
-        { name: "Contact Me", url: "#contact" },
+        { name: "Skills", url: "#skills" },
+        { name: "Contact", url: "#contact" },
         { name: "GitHub", url: "https://github.com/N-Crossman", external: true },
         { name: "LinkedIn", url: "https://linkedin.com/in/noah-crossman", external: true },
     ];
