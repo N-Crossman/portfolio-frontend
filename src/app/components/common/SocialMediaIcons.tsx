@@ -10,7 +10,7 @@ const socialLinks = [
     { href: "#about", icon: <VscAccount />, label: "About", external: false },
     { href: "#projects", icon: <FaRegFolder />, label: "Projects", external: false },
     { href: "#skills", icon: <LuBrain />, label: "Skills", external: false },
-    { href: "UPDATE: Contact section", icon: <GrContact />, label: "Contact", external: false },
+    { href: "#contact", icon: <GrContact />, label: "Contact", external: false },
     { href: "https://github.com/N-Crossman", icon: <FaGithub />, label: "GitHub", external: true },
     { href: "https://linkedin.com/in/noah-crossman", icon: <FaLinkedin />, label: "LinkedIn", external: true },
 ];
