@@ -33,7 +33,7 @@ export const projects: Project[] = [
     title: "3D Print Shop",
     description: "A full-featured Django application built to power a customizable 3D printing storefront. This platform enables seamless product management, dynamic order processing, and real-time customization for both customers and administrators. With a modern and responsive frontend styled using Tailwind CSS, and a robust backend architecture, this application delivers a smooth and intuitive user experience.",
     image: "/images/projects/Animation.gif",
-    tech: ["Python", "Django", "MYSQL", "Tailwind", "Selenium"],
+    tech: ["Python", "Django", "MySQL", "Tailwind", "Selenium"],
     repo: "https://github.com/N-Crossman/DjangoPortfolio",
   },
 ];
