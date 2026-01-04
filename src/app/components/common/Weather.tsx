@@ -20,11 +20,10 @@ interface WeatherData {
 }
 
 interface WeatherProps {
-    apiKey: string;
     unit?: 'metric' | 'imperial';
 }
 
-const WeatherFooter: React.FC<WeatherProps> = ({ apiKey, unit = 'metric' }) => {
+const WeatherFooter: React.FC<WeatherProps> = ({ unit = 'metric' }) => {
     const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
     const [currentTime, setCurrentTime] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(true);
@@ -42,27 +41,75 @@ const WeatherFooter: React.FC<WeatherProps> = ({ apiKey, unit = 'metric' }) => {
     }, []);
 
     useEffect(() => {
-        const fetchWeather = async () => {
+        let isMounted = true;
+
+        const fetchWeather = async (lat?: number, lon?: number) => {
+            if (!isMounted) return;
+            setLoading(true);
+            setError(null);
+
             try {
-                const url = `https://api.openweathermap.org/data/2.5/weather?q=Calgary,CA&units=${unit}&appid=${apiKey}`;
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch weather data');
+                const params = new URLSearchParams();
+                if (lat && lon) {
+                    params.append('lat', lat.toString());
+                    params.append('lon', lon.toString());
+                }
+                params.append('unit', unit);
+
+                const response = await fetch(`/api/weather?${params.toString()}`, {
+                    cache: 'no-store',
+                });
+                const data = await response.json();
+
+                if (response.status !== 200) {
+                    throw new Error(data.error || 'Failed to fetch weather data');
                 }
 
-                const data = await response.json();
                 setWeatherData(data);
-                setLoading(false);
-            } catch (err) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            } catch (err: any) {
                 console.error(err);
-                setError('Error fetching weather data');
+                setError(err.message || 'An error occurred while fetching weather data');
+            } finally {
                 setLoading(false);
             }
         };
 
-        fetchWeather();
-    }, [apiKey, unit,]);
+        const requestWeather = () => {
+            if (!navigator.geolocation) {
+                fetchWeather();
+                return;
+            }
 
+            const timeoutId = window.setTimeout(() => {
+                console.warn('Geolocation timed out. Fetching weather for default city.');
+                fetchWeather();
+            }, 6000);
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    window.clearTimeout(timeoutId);
+                    fetchWeather(position.coords.latitude, position.coords.longitude);
+                },
+                () => {
+                    window.clearTimeout(timeoutId);
+                    console.warn('Geolocation permission denied. Fetching weather for default city.');
+                    fetchWeather();
+                },
+                {
+                    enableHighAccuracy: false,
+                    timeout: 5000,
+                    maximumAge: 600000,
+                }
+            );
+        };
+
+        requestWeather();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [unit]);
     const tempUnit = unit === 'metric' ? '°C' : '°F';
 
     return (
@@ -83,6 +130,7 @@ const WeatherFooter: React.FC<WeatherProps> = ({ apiKey, unit = 'metric' }) => {
             </div>
         )}
     </>
-);};
+    );
+};
 
 export default WeatherFooter;
