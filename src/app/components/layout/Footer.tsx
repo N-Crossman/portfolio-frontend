@@ -28,7 +28,7 @@ export default function Footer() {
             </div>
 
             <div className="justify-self-end flex flex-col gap-2">
-              <p className="text-sm text-black dark:text-white">dev.noah@gmail.com</p>
+              <p className="text-sm text-black dark:text-white">noahs.dev.work@gmail.com</p>
               <p className="text-sm text-black dark:text-white">&copy; {new Date().getFullYear()}. All rights reserved.</p>
             </div>
           </div>
