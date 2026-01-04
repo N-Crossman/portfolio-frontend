@@ -25,7 +25,7 @@ export default function ProjectCard({ project, index}: ProjectCardProps){
           src={project.image || "/images/projects/placeholder.png"}
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-contain"
         />
       </div>
 
