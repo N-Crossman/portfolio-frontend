@@ -30,9 +30,10 @@ export const projects: Project[] = [
     repo: "https://github.com/N-Crossman/NHL-Stats"
   },
   {
-    title: "Coming Soon",
-    description: "More projects coming soon 👨‍💻",
-    image: "/images/projects/placeholder.png",
-    tech: ["JavaScript", "Node.js"],
+    title: "3D Print Shop",
+    description: "A full-featured Django application built to power a customizable 3D printing storefront. This platform enables seamless product management, dynamic order processing, and real-time customization for both customers and administrators. With a modern and responsive frontend styled using Tailwind CSS, and a robust backend architecture, this application delivers a smooth and intuitive user experience.",
+    image: "/images/projects/Animation.gif",
+    tech: ["Python", "Django", "MYSQL", "Tailwind", "Selenium"],
+    repo: "https://github.com/N-Crossman/DjangoPortfolio",
   },
 ];

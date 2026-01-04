@@ -9,6 +9,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index}: ProjectCardProps){
+    const isGif = project.image?.toLowerCase().endsWith('.gif');
+
     return (
     <motion.div
       initial={{ opacity: 0, y: 40 }} 
@@ -26,6 +28,7 @@ export default function ProjectCard({ project, index}: ProjectCardProps){
           alt={project.title}
           fill
           className="object-contain"
+          unoptimized={isGif}
         />
       </div>
 
