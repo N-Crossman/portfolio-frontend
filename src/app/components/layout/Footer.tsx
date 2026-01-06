@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4 md:hidden text-center">
             <WeatherFooter unit="metric" />
             <QuickLinks />
-            <p className="text-sm text-black dark:text-white">dev.noah@gmail.com</p>
+            <p className="text-sm text-black dark:text-white">noahs.dev.work@gmail.com</p>
             <p className="text-sm text-black dark:text-white">&copy; {new Date().getFullYear()}. All rights reserved.</p>
           </div>
 
