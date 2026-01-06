@@ -5,7 +5,7 @@ import StarsBackground from './components/layout/StarsBackground';
 import Header from './components/layout/Header';
 
 export const metadata = {
-  title: "Noah's Portfolio",
+  title: "Noah Crossman | Portfolio",
   description: "Junior full-stack developer portfolio",
 };
 
