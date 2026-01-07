@@ -9,12 +9,17 @@ export default function Contact() {
                 I&rsquo;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!
             </p>
               <div className="flex gap-3 sm:gap-4 md:gap-6 justify-center">
-                <button className="bg-green-900 text-white px-5 py-3 rounded-xl md:rounded-2xl shadow-lg hover:bg-green-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <a
+                 href="mailto:noahs.dev.work@gmail.com"
+                 className="bg-green-900 text-white px-5 py-3 rounded-xl md:rounded-2xl shadow-lg hover:bg-green-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
                     Contact Me
-                </button>
-                <button className="bg-green-900 text-white px-5 py-3 rounded-xl md:px-6 md:rounded-2xl shadow-lg hover:bg-green-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
-                    Download resume(CV)
-                </button>
+                </a>
+                <a
+                href="resume/Noah_Crossman_Resume.pdf"
+                download
+                className="bg-green-900 text-white px-5 py-3 rounded-xl md:px-6 md:rounded-2xl shadow-lg hover:bg-green-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                Download resume(CV)
+                </a>
             </div>
         </section>
     )
