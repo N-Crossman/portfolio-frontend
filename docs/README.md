@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Noah Crossman Portfolio
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This portfolio showcases my projects, skills, and professional experience with a clean, interactive design featuring smooth animations and dynamic content.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This portfolio website serves as a comprehensive showcase of my work as a developer. Built with modern web technologies and best practices, the site delivers a seamless user experience with fast load times, smooth animations, and responsive design that works responsively across all devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The portfolio demonstrates proficiency in React, TypeScript, Next.js, and modern CSS frameworks while providing visitors with an intuitive way to learn about my skills, view my projects, and get in touch.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### User Interface
 
-## Learn More
+- **Responsive Design** - Fully optimized for desktop, tablet, and mobile devices
+- **Dark Mode Toggle** - Switch between light and dark themes for comfortable viewing
+- **Smooth Animations** - Engaging animations in the background
+- **Modern Aesthetics** - Clean, professional design with attention to detail
 
-To learn more about Next.js, take a look at the following resources:
+### Core Sections
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **About Section** - Introduction and professional background
+- **Project Showcase** - Interactive gallery of featured projects with descriptions and links
+- **Skills Section** - Visual representation of technical skills and competencies
+- **Weather Card** - Live weather integration for dynamic content
+- **Resume Download** - Quick access to downloadable resume in PDF format
+- **Contact Button** - Easy way for visitors to reach out
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Performance
 
-## Deploy on Vercel
+- **Fast Load Times** - Optimized with Next.js for server-side rendering and static generation
+- **SEO Optimized** - Proper meta tags and semantic HTML for search engine visibility
+- **Type Safety** - Full TypeScript integration for robust, maintainable code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technologies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Technology                                                                                           | Purpose                      |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- |
+| ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=next.js&logoColor=white)                | React framework with SSR/SSG |
+| ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black)                      | UI component library         |
+| ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)       | Type-safe JavaScript         |
+| ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-06B6D4?logo=tailwind-css&logoColor=white) | Utility-first CSS framework  |
+
+## Contact
+
+- Portfolio: [Noah's Portfolio](https://www.noahh.dev/])
+- GitHub: [@N-Crossman](https://github.com/N-Crossman)
+- LinkedIn: [Noah Crossman](https://www.linkedin.com/in/noah-crossman/)
+- Email: noahs.dev.work@gmail.com
+
+---
+
+⭐ If you found this portfolio interesting, feel free to star the repository!
