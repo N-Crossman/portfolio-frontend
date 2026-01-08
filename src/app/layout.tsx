@@ -1,7 +1,7 @@
 import './globals.css';
 import Footer from "./components/layout/Footer"
 import ThemeProvider from './components/layout/ThemeProvider';
-import StarsBackground from './components/layout/StarsBackground';
+import BackgroundSwitcher from './components/layout/BackgroundSwitcher';
 import Header from './components/layout/Header';
 
 export const metadata = {
@@ -15,10 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
         <ThemeProvider>
           <Header />
-          <StarsBackground>
+          <BackgroundSwitcher>
             {children}
             <Footer />
-          </StarsBackground>
+          </BackgroundSwitcher>
         </ThemeProvider>
       </body>
     </html>
