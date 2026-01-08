@@ -22,7 +22,7 @@ export const projects: Project[] = [
     type: "opensource",
   },
   {
-    title: "NHL Statistics App",
+    title: "Pucklytics",
     description: "Explore today's NHL scoreboard, track league standings, browse teams and rosters, and view player career stats. All in a responsive, easy to navigate Next.js app.",
     image: "/images/projects/PortfolioNHL-Stats.png",
     tech: ["Next.js", "TypeScript", "React", "Tailwind"],
