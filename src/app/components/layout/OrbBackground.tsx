@@ -7,78 +7,79 @@ interface OrbBackgroundProps {
 }
 
 export default function OrbBackground({ children }: OrbBackgroundProps) {
+    const [sizeMultiplier, setSizeMultiplier] = useState(1);
     const [opacityMultiplier, setOpacityMultiplier] = useState(1);
 
     useEffect(() => {
         const width = window.innerWidth;
         if (width >= 2560) {
-            setOpacityMultiplier(1.8); 
+            setSizeMultiplier(1.8);
+            setOpacityMultiplier(2);
         } else if (width >= 1920) {
-            setOpacityMultiplier(1.5); 
+            setSizeMultiplier(1.5);
+            setOpacityMultiplier(1.8);
+        } else if (width < 768) {
+            setSizeMultiplier(1.6);
+            setOpacityMultiplier(2.5);
         } else {
+            setSizeMultiplier(1);
             setOpacityMultiplier(1);
         }
     }, []);
 
-    const orbs = useMemo(() => Array.from({ length: 20 }, (_, i) => {
-        const patterns = [
-            { x: ["-40%", "40%", "-40%"], y: ["-30%", "30%", "-30%"] },
-            { x: ["-30%", "50%", "-30%"], y: ["-40%", "20%", "-40%"] },
-            { x: ["-50%", "30%", "-50%"], y: ["-20%", "40%", "-20%"] },
-            { x: ["-35%", "35%", "-35%"], y: ["-35%", "35%", "-35%"] },
-        ];
-        
-        return {
-            id: i,
-            x: Math.random() * 80 + 10,
-            y: Math.random() * 80 + 10,
-            sizeVw: Math.random() * 20 + 25,
-            duration: Math.random() * 3 + 4, 
-            delay: Math.random() * 2,
-            baseOpacity: [0.22, 0.22, 0.22, 0.22][i % 4],
-            colorBase: [
-                "100, 150, 255", 
-                "150, 120, 255",
-                "100, 200, 180",
-                "255, 160, 120",
-            ][i % 4],
-            pattern: patterns[i % 4],
-        };
-    }), []); 
+    const orbs = useMemo(() => Array.from({ length: 80 }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 200 - 50,
+        baseSize: Math.random() * 6 + 3,
+        duration: Math.random() * 10 + 15, 
+        delay: 0,
+        baseOpacity: Math.random() * 0.4 + 0.3,
+        color: [
+            "rgb(100, 150, 255)", 
+            "rgb(120, 140, 200)",
+            "rgb(130, 180, 170)",
+            "rgb(180, 150, 200)",
+        ][i % 4],
+    })), []); 
 
     return (
-     <div className="relative w-full min-h-screen overflow-hidden">
-      <div className="absolute inset-0 overflow-visible">
-        {orbs.map((orb) => (
-          <motion.div
-            key={orb.id}
-            className="absolute rounded-full"
-            style={{
-              left: `${orb.x}%`,
-              top: `${orb.y}%`,
-              width: `${orb.sizeVw}vw`,
-              height: `${orb.sizeVw}vw`,
-              background: `radial-gradient(circle, rgba(${orb.colorBase}, ${orb.baseOpacity * opacityMultiplier}) 0%, transparent 70%)`,
-              filter: "blur(60px)",
-              transform: "translate(-50%, -50%)",
-            }}
-            animate={{
-              x: orb.pattern.x, 
-              y: orb.pattern.y,
-              scale: [1, 1.15, 1],
-            }}
-            transition={{
-              duration: orb.duration,
-              delay: orb.delay,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatType: "loop",
-            }}
-          />
-        ))}
-      </div>
+        <div className="relative w-full min-h-screen overflow-hidden bg-white">
+            <div className="absolute inset-0">
+                {orbs.map((orb) => (
+                    <motion.div
+                        key={orb.id}
+                        className="absolute rounded-full"
+                        style={{
+                            left: `${orb.x}%`,
+                            top: `${orb.y}%`,
+                            width: orb.baseSize * sizeMultiplier,
+                            height: orb.baseSize * sizeMultiplier,
+                            backgroundColor: orb.color,
+                            opacity: orb.baseOpacity * opacityMultiplier,
+                        }}
+                        animate={{
+                            y: [0, -150, -300, -450, -600],
+                            x: [0, Math.random() * 15 - 7.5, Math.random() * 15 - 7.5, 0, 0],
+                            opacity: [
+                                orb.baseOpacity * opacityMultiplier, 
+                                orb.baseOpacity * opacityMultiplier, 
+                                orb.baseOpacity * opacityMultiplier * 0.8, 
+                                orb.baseOpacity * opacityMultiplier * 0.5,
+                                0
+                            ],
+                        }}
+                        transition={{
+                            duration: orb.duration,
+                            delay: orb.delay,
+                            repeat: Infinity,
+                            ease: "easeOut",
+                        }}
+                    />
+                ))}
+            </div>
 
-      <div className="relative z-10">{children}</div>
-    </div>
-  );
+            <div className="relative z-10">{children}</div>
+        </div>
+    );
 }
