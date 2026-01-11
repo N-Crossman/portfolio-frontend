@@ -44,7 +44,7 @@ export default function OrbBackground({ children }: OrbBackgroundProps) {
     })), []); 
 
     return (
-        <div className="relative w-full min-h-screen overflow-hidden bg-white">
+        <div className="relative w-full min-h-screen overflow-hidden bg-stone-200">
             <div className="absolute inset-0">
                 {orbs.map((orb) => (
                     <motion.div
