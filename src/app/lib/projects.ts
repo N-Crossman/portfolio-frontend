@@ -12,7 +12,7 @@ export interface Project {
 export const projects: Project[] = [
     {
     title: "AGInfrastructure",
-    description: "Active contributor driving quality improvements across AGI-X framework. Shipped frontend features for timezone and user management, implemented comprehensive test suites, and resolved blocking issues affecting developer experience.",
+    description: "Open-source contributor to AGInfrastructure (AGI-X). Shipped production frontend features (timezone handling, user management), debugged and stabilized a large automated test suite, and resolved critical issues to improve framework reliability and developer experience.",
     image: "/images/projects/AGIportfolio.png",
     tech: ["Next.js", "React", "TypeScript", "Python", "Tailwind", "FastAPI"],
     repos: [
