@@ -12,13 +12,13 @@ export default function Hero() {
         About Me
       </h1>
       <p className="mt-6 text-base sm:text-lg text-black dark:text-gray-300">
-        Hello! I&rsquo;m Noah, a full-stack developer based in Calgary, Alberta who loves solving complex problems and building scalable applications. I hold a diploma in Full Stack Web Development from the University of Alberta and I&rsquo;m an active open source contributor.
+        Hey, I&rsquo;m Noah, a full-stack developer based in Calgary, Alberta. I build and ship applications using TypeScript, React, and Next.js, with backend experience in Python, Django, C#, and Node.js. I&rsquo;m also an open-source contributor with merged PRs in production codebases.
       </p>
       <p className="mt-6 text-base sm:text-lg text-black dark:text-gray-300">
-        My background managing teams in fast-paced environments has taught me to communicate clearly, solve problems efficiently, and lead by example. I thrive in collaborative settings where I can both contribute technically and elevate those around me.
+        Alongside development, I bring 8 years in operations and management, leading teams, managing inventory, and keeping things running under pressure. That experience shaped how I work: clear communication, pragmatic problem solving, and getting things done.
       </p>
       <p className="mt-6 text-base sm:text-lg text-black dark:text-gray-300">
-        When I&rsquo;m not coding, you can find me enjoying the beautiful Alberta wilderness, contributing to open source, or exploring new technologies.
+        When I&rsquo;m not coding, you&rsquo;ll find me out in the Alberta wilderness or digging into something new I&rsquo;ve been meaning to build.
       </p>
       </div>
       <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-blue-400 dark:border-blue-500 shadow-lg flex-shrink-0 lg:mt-32">
@@ -33,4 +33,4 @@ export default function Hero() {
       </div>
     </section>
   );
-} 
+}
