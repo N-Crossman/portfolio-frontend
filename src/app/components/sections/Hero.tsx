@@ -12,13 +12,13 @@ export default function Hero() {
         About Me
       </h1>
       <p className="mt-6 text-base sm:text-lg text-black dark:text-gray-300">
-        Hey, I&rsquo;m Noah, a full-stack developer based in Calgary, Alberta. I build and ship applications using TypeScript, React, and Next.js, with backend experience in Python, Django, C#, and Node.js. I&rsquo;m also an open-source contributor with merged PRs in production codebases.
+       I&lsquo;m Noah, a full-stack developer based in Calgary, Alberta. My stack centers on TypeScript, React, and Next.js on the frontend, with backend work in Python and FastAPI. I build and ship full-stack applications end to end, from architecture and API design to deployment, and I&lsquo;ve contributed to open-source projects with merged PRs in production codebases. 
+       </p>
+      <p className="mt-6 text-base sm:text-lg text-black dark:text-gray-300">
+       Before development, I spent 8 years in operations and team management. That background shaped how I approach my work: I communicate clearly, take ownership of what I build, and know how to stay focused and deliver when the pressure is on.
       </p>
       <p className="mt-6 text-base sm:text-lg text-black dark:text-gray-300">
-        Alongside development, I bring 8 years in operations and management, leading teams, managing inventory, and keeping things running under pressure. That experience shaped how I work: clear communication, pragmatic problem solving, and getting things done.
-      </p>
-      <p className="mt-6 text-base sm:text-lg text-black dark:text-gray-300">
-        When I&rsquo;m not coding, you&rsquo;ll find me out in the Alberta wilderness or digging into something new I&rsquo;ve been meaning to build.
+       When I’m not coding, you’ll find me out in the Alberta wilderness, involved in various sports, or digging into something new I’ve been meaning to build.
       </p>
       </div>
       <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-blue-400 dark:border-blue-500 shadow-lg flex-shrink-0 lg:mt-32">
