@@ -36,4 +36,11 @@ export const projects: Project[] = [
     tech: ["Python", "Django", "MySQL", "Tailwind", "Selenium"],
     repo: "https://github.com/N-Crossman/DjangoPortfolio",
   },
+  {
+    title: "Curra",
+    description: "Curra is a full-stack health management platform for tracking medications, appointments, healthcare providers, and lab results in one place. Built with chronic illness patients in mind, but flexible enough for anyone managing their health.",
+    image: "/images/projects/placeholder.png",
+    tech: ["JavaScript", "TypeScript", "Next.js", "Python", "FastAPI",],
+    repo: "https://github.com/N-Crossman/Curra",
+  },
 ];
