@@ -21,7 +21,7 @@ export default function Hero() {
        When I’m not coding, you’ll find me out in the Alberta wilderness, involved in various sports, or digging into something new I’ve been meaning to build.
       </p>
       </div>
-      <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-blue-400 dark:border-blue-500 shadow-lg flex-shrink-0 lg:mt-32">
+      <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-black dark:border-neutral-200 shadow-lg flex-shrink-0 lg:mt-32">
         <Image
           src="/images/ProfilePic.jpg"
           alt="Noah's Profile Picture"
