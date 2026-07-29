@@ -20,7 +20,7 @@ export default function ProjectCard({ project, index}: ProjectCardProps){
         delay: index * 0.2, 
         ease: "easeOut",
       }}
-      className="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+      className="bg-neutral-800 border border-neutral-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
     >
       <div className="relative w-full h-48">
         <Image
@@ -41,7 +41,7 @@ export default function ProjectCard({ project, index}: ProjectCardProps){
             {project.tech.map((tech: string, index: number) => (
               <span
                 key={index}
-                className="bg-neutral-800 text-gray-300 text-xs px-2 py-1 rounded-lg"
+                className="bg-neutral-700 text-gray-300 text-xs px-2 py-1 rounded-lg"
               >
                 {tech}
               </span>

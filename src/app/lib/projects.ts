@@ -39,8 +39,8 @@ export const projects: Project[] = [
   {
     title: "Curra",
     description: "Curra is a full-stack health management platform for tracking medications, appointments, healthcare providers, and lab results in one place. Built with chronic illness patients in mind, but flexible enough for anyone managing their health.",
-    image: "/images/projects/placeholder.png",
-    tech: ["JavaScript", "TypeScript", "Next.js", "Python", "FastAPI",],
+    image: "/images/projects/Curra.gif",
+    tech: ["Next.js", "TypeScript", "React", "Tailwind", "Python", "FastAPI", "PostgreSQL"],
     repo: "https://github.com/N-Crossman/Curra",
   },
 ];
